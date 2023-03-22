@@ -31,5 +31,19 @@ void display(Node *head)
 	}
 	printf("\n");
 }
+void modify(struct Node *head, int k, Data newVal)
+{
+    struct Node *current = head;
+    int i = 0;
+
+    while (current != NULL && i < k) {
+        current = current->next;
+        i++;
+    }
+
+    if (current != NULL) {
+        current->val = newVal;
+    }
+}
 
 

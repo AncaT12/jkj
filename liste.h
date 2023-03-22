@@ -9,4 +9,5 @@ typedef struct Node{
 void addAtBeginning(Node **head, Data v);
 void addAtEnd(Node** head, Data v);
 void display(Node *head);
+void modify(struct Node *head, int k, Data newVal);
 
