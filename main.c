@@ -1,19 +1,24 @@
-#include "liste.h"
+#include "stive.h"
 
 int main()
 {
-    struct Node *head = NULL;
+   char c;
+  Node * stackTop = NULL ;
+  push (&stackTop ,'c');
+  push (&stackTop ,'r');
+  push (&stackTop ,'f');
+  printf("Valoarea de la varful stivei: %c\n", top(stackTop));
+    c = pop(&stackTop);
+    printf("Elementul eliminat: %c\n", c);
 
-    addAtEnd(&head, 1);
-    addAtEnd(&head, 2);
-    addAtEnd(&head, 3);
-    display(head);
+    // Afisăm toate elementele rămase în stivă
+    printf("Elementele rămase în stivă: ");
+    while (!isEmpty(stackTop)) {
+        printf("%c ", top(stackTop));
+        pop(&stackTop);
+    }
 
-    addAtBeginning(&head, 0);
-    display(head);
-    modify(head,2,4);
-    display(head);
+    // Eliberăm memoria alocată pentru stivă
+  deleteStack(&stackTop);
 
-
-    return 0;
-}
+  }
