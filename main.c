@@ -1,4 +1,4 @@
-#include "stive.h"
+#include "stiva.h"
 
 int main()
 {
@@ -11,14 +11,14 @@ int main()
     c = pop(&stackTop);
     printf("Elementul eliminat: %c\n", c);
 
-    // Afisăm toate elementele rămase în stivă
+
     printf("Elementele rămase în stivă: ");
     while (!isEmpty(stackTop)) {
         printf("%c ", top(stackTop));
         pop(&stackTop);
     }
 
-    // Eliberăm memoria alocată pentru stivă
   deleteStack(&stackTop);
 
   }
+
